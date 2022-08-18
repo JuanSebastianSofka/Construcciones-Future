@@ -173,7 +173,7 @@ object Main {
             println("No hay solicitudes en progreso")
           } else {
             val listaFinalizadaReal = ordenesFinalizadas.filter(orden => diaSimulado.toDate.after(orden.fechaFinal) && orden.estado.equals("Finalizado"))
-            
+
             val filtradoFinaliazadas = Future {
               Validaciones.mostrarInformacionFiltradaFinalizada(listaFinalizadaReal)
             }
